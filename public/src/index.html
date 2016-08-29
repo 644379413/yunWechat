@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <!-- 启用 WebApp 全屏模式 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <script data-pace-options='{ "ajax": false }' src="//cdn.bootcss.com/pace/1.0.2/pace.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/white/pace-theme-center-atom.css" rel="stylesheet">
+
+  <style>
+    html {
+      -webkit-text-size-adjust: none;
+      font-size: 36px;
+    }
+
+    html, body {
+      width: 100vw;
+      height: 100%;
+    }
+  </style>
+  <title>爱我乐运</title>
+
+</head>
+<body style="background-color: #FB8557;">
+
+<div id="app" style="display: none;"></div>
+
+</body>
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/Swiper/3.3.1/css/swiper.css" rel="stylesheet">
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.js"></script>
+<script src="//cdn.bootcss.com/Swiper/3.3.1/js/swiper.min.js"></script>
+<script>
+  window.onload = function () {
+
+    window.addEventListener('load', function () {
+      FastClick.attach(document.body);
+    }, false);
+
+    document.querySelector('#app').style.display = 'block';
+    document.querySelector('body').style.backgroundColor = '#F9F9F9';
+
+  };
+
+
+  // 根据屏幕的大小计算当前html的fontSize的大小
+  (function (doc, win) {
+    var docEl = doc.documentElement,
+      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+      recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        docEl.style.fontSize = 36 * (clientWidth / 750) + 'px';
+      };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+  })(document, window);
+
+</script>
+</html>
+
+
+
+

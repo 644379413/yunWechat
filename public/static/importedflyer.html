@@ -1,0 +1,163 @@
+<html style="font-size: 14px">
+<head>
+  <title>出口货代现金奖励</title>
+  <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.css" rel="stylesheet">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <style>
+    body, html {
+      width: 100vw;
+      height: 100vh;
+      margin: 0px;
+      overflow-y: hidden;
+    }
+
+    .importedflyer {
+    }
+
+    .importedflyer .layers {
+      width: 26.8rem;
+      height: 100vh;
+      opacity: 1;
+      background-image: url('./img/importedflyer/bg.png');
+      background-repeat: no-repeat;
+      background-size: 26.8rem 43.1rem;
+    }
+
+    .importedflyer .layers .logo {
+      width: 6rem;
+      height: 2.4rem;
+      padding-left: 0.7rem;
+      padding-top: 0.5rem;
+      background-image: url('./img/importedflyer/logo.png');
+      background-repeat: no-repeat;
+      background-size: 6rem 2.4rem;
+      background-position: 0.7rem 0.5rem;
+    }
+
+    .importedflyer .chukou {
+      height: 17.6rem;
+      padding-top: 1.1rem;
+      background-image: url('./img/importedflyer/imported.png');
+      background-position: 3.1rem 1.1rem;
+      background-size: 22.5rem 17.6rem;
+      background-repeat: no-repeat;
+
+    }
+
+    .importedflyer .youhui {
+      float: left;
+      width: 12.6rem;
+      height: 8.1rem;
+      padding-top: 5.9rem;
+      padding-left: 1.6rem;
+      background-image: url('./img/importedflyer/youhui.png');
+      background-position: 1.6rem 5.9rem;
+      background-size: 12.6rem 8.1rem;
+      background-repeat: no-repeat;
+
+    }
+
+    .importedflyer .qrcode {
+      float: left;
+      margin-left: 1.5rem;
+      padding-top: 5.5rem;
+
+    }
+
+    .importedflyer .qrcode .code {
+      width: 8.1rem;
+      height: 9.7rem;
+      margin-bottom: 0.1rem;
+      margin-right: 3.0rem;
+    }
+
+    .importedflyer .phoneNo {
+      float: left;
+      width: 13.1rem;
+      height: 2.1rem;
+      margin-left: 1rem;
+    }
+
+    .importedflyer .phoneNo img {
+      width: 13.1rem;
+      height: 2.1rem;
+    }
+
+    .importedflyer .qqCustomer {
+      float: left;
+      width: 10.3rem;
+      height: 1.8rem;
+      margin-left: 1.1rem;
+      margin-right: 1.3rem;
+    }
+
+    .importedflyer .qqCustomer img {
+      width: 10.3rem;
+      height: 1.8rem;
+    }
+
+    .importedflyer .platform img {
+      width: 17.9rem;
+      height: 1.2rem;
+      margin-left: 4.5rem;
+      margin-top: 1.6rem;
+    }
+
+    .importedflyer .animated {
+      -vendor-animation-duration: 1.5s;
+      -vendor-animation-delay: 0s;
+      -webkit-animation-duration: 1.5s;
+      -moz-animation-duration: 1.5s;
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="importedflyer" class="flyer importedflyer">
+  <div class="layers">
+    <div class="logo"></div>
+    <div id="content">
+      <div class="chukou animated bounceInUp "></div>
+      <div>
+        <div class="youhui animated bounceInLeft"></div>
+        <div class="qrcode animated bounceInLeft">
+          <img class="code" src="./img/importedflyer/qrcode.png">
+        </div>
+      </div>
+      <div>
+        <div class="phoneNo animated bounceInLeft">
+          <a href="tel:4000625256">
+            <img src="./img/importedflyer/tel.png">
+          </a>
+        </div>
+        <div class="qqCustomer animated bounceInLeft">
+          <img src="./img/importedflyer/qq.png">
+        </div>
+      </div>
+      <div class="platform animated bounceInLeft">
+        <img src="./img/importedflyer/platform.png">
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+  (function (doc, win) {
+    var docEl = doc.documentElement,
+      resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+      recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        docEl.style.fontSize = 14 * (clientWidth / 375) + 'px';
+      };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+  })(document, window);
+
+
+</script>
+</body>
+</html>
